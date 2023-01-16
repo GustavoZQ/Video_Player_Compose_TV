@@ -58,8 +58,8 @@ afterEvaluate {
         publications{
             release(MavenPublication){
                 from components.release
-                groupId = 'com.apiresults.bygdx'
-                artifactId = 'CallAdapterFactory'
+                groupId = 'com.bygdx.videoplayercomposetv'
+                artifactId = 'Video Player Compose TV'
                 version = '1.0.0'
             }
         }
