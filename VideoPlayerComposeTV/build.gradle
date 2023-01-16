@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'maven-publish'
     id 'org.jetbrains.kotlin.android'
 }
 
@@ -50,4 +51,17 @@ dependencies {
     //Exoplayer
     implementation "com.google.android.exoplayer:exoplayer:$exoVersion"
     implementation "com.google.android.exoplayer:exoplayer-core:$exoVersion"
+}
+
+afterEvaluate {
+    publishing {
+        publications{
+            release(MavenPublication){
+                from components.release
+                groupId = 'com.apiresults.bygdx'
+                artifactId = 'CallAdapterFactory'
+                version = '1.0.0'
+            }
+        }
+    }
 }
